@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamanho figura</title>
+</head>
+<body>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/4123/4123763.png" id="img">
+    <button onclick="Aumenta()">Aumenta largura</button><button onclick="Diminui()">Reduzir a largura</button>
+    
+</body>
+</html>
+<script>
+
+    tamanho = 0
+
+    function Aumenta(){
+        tamanho += 10
+        img.style.width = `${tamanho}px`
+    }
+
+    function Diminui(){
+        tamanho -= 10
+        img.style.width = `${tamanho}px`
+    }
+    
+</script>
