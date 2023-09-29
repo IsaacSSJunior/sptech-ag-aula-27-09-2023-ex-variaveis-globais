@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tio Patinhas</title>
+</head>
+
+<body>
+    Total guardado no cofrinho: R$<i id="totalCofrinho">0</i> <br>
+    Depósitos efetuados: <i id="depositosCofrinho">0</i><br>
+    Retiradas efetuadas: <i id="retiradasCofrinho">0</i><br>
+
+    <button onclick="depositar50centavos()">Depositar R$0,50</button><br>
+    <button onclick="depositar2reais()">Depositar R$2,00</button><br>
+    <button onclick="retirar50centavos()">Retirar R$0,50</button><br>
+    <button onclick="retirar()">Retirar</button><br>
+    <br>
+    <br>
+    <input type="text" id="input_valor" placeholder="Valor a retirar...">
+</body>
+
+</html>
+<script>
+
+    var total = 0
+    var depositos = 0
+    var retiradas = 0
+
+    function depositar50centavos(){
+        total += 0.50
+        depositos += 1
+        totalCofrinho.innerHTML = total
+        depositosCofrinho.innerHTML = depositos
+    }
+
+    function depositar2reais(){
+        total += 2.00
+        depositos += 1
+        totalCofrinho.innerHTML = total
+        depositosCofrinho.innerHTML = depositos
+    }
+
+    function retirar50centavos(){
+        total -= 0.50
+        retiradas += 1
+        totalCofrinho.innerHTML = total
+        retiradasCofrinho.innerHTML = retiradas
+    }
+
+    function retirar(){
+        total -= Number(input_valor.value)
+        retiradas += 1
+        totalCofrinho.innerHTML = total
+        retiradasCofrinho.innerHTML = retiradas
+    }
+
+
+
+
+
+
+</script>
