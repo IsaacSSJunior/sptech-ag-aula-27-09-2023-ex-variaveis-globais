@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <button onclick="esquerda()">Mover p/ Esquerda</button><button onclick="direita()">Mover p/ Direita</button><input type="number" id="input_direcao"><br>
+        <img class="bart" id="imagem" src="imagem.png">
+</body>
+</html>
+
+    <style>
+
+        body{
+            background-image: url("https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/1/aunt-mays-downstairs-front-view-spidey-2-day-richard-lund.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 110%;
+            background-position: top;
+            align-self: center;
+        }
+
+        .bart{
+               margin-top: 20%; 
+               transform: scale(0.6);
+            }
+
+    </style>
+
+<script>
+
+    var margem = 0;
+
+    function direita(){
+        margem = margem + Number(input_direcao.value);
+        imagem.style.marginLeft = margem + "px";
+        imagem.style.transform = "scaleX(1)";
+    }
+
+    function esquerda(){
+        margem = margem - Number(input_direcao.value);
+        imagem.style.marginLeft = margem + "px";
+        imagem.style.transform = "scaleX(-1)";
+    }
+
+
+</script>
